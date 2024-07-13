@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .back-button:hover {
+            background-color: #333;
+        }
+
+        .button-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .button {
+            display: block;
+            padding: 20px;
+            margin-bottom: 10px;
+            background-color: white;
+            color: #333;
+            text-decoration: none;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #f0f0f0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .button span {
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .button small {
+            display: block;
+            font-size: 14px;
+            color: #888;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="back-button" onclick="goBack()">&#x2190; Back</button>
+        <div class="button-list">
+            <a href="#" class="button">
+                <span>All Content</span>
+                <small>All Videos | All Exercises | All Notes</small>
+            </a>
+            <a href="#" class="button">
+                <span>Batch Demo Videos</span>
+                <small>28 Videos</small>
+            </a>
+            <a href="#" class="button">
+                <span>Lecture Planner || (Only PDF)</span>
+                <small>20 Notes</small>
+            </a>
+            <a href="#" class="button">
+                <span>Test Planner || (Only PDF)</span>
+                <small>2 Notes</small>
+            </a>
+            <a href="#" class="button">
+                <span>Class Schedule || (Only PDF)</span>
+                <small>20 Notes</small>
+            </a>
+            <a href="#" class="button">
+                <span>Telegram Link || (Only PDF)</span>
+                <small>1 Note</small>
+            </a>
+        </div>
+    </div>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
